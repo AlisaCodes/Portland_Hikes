@@ -1,13 +1,16 @@
 <h2>Take a hike, Friend.</h2>
 <p>(Or just die slowly.)</p>
 
-
-<div class="row">
-  <!-- <div class="" -->
-    <ul>
-      {{#each model as |hike|}}
-        <li>{{hike.name}}</li>
-        <li><img src={{hike.image}}></li>
-      {{/each}}
-    </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+        {{#each model as |hike|}}
+          {{hike-tile hike=hike destroyHike="destroyHike"}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
+
+{{new-hike save2="save3"}}
